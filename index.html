@@ -241,7 +241,7 @@
                     1.8vw,
                     22px
                 );
-                color: rgba(255, 255, 255, 0.70);
+                color: rgba(255, 255, 255, 0.7);
                 font-weight: 300;
                 letter-spacing: 1px;
                 margin-bottom: 1rem;
@@ -367,7 +367,7 @@
                     1.2vw,
                     15px
                 );
-                color: rgba(255, 255, 255, 0.70);
+                color: rgba(255, 255, 255, 0.7);
                 margin-top: 10px;
                 line-height: 1.4;
                 font-weight: 575;
@@ -437,7 +437,7 @@
                     15px
                 );
                 font-weight: 575;
-                color: rgba(255, 255, 255, 0.70);
+                color: rgba(255, 255, 255, 0.7);
                 line-height: 1.6;
             }
 
@@ -524,7 +524,7 @@
                     1.1vw,
                     14px
                 );
-                color: rgba(255, 255, 255, 0.70);
+                color: rgba(255, 255, 255, 0.7);
                 line-height: 1.4;
                 margin-top: 6px;
                 font-weight: 575;
@@ -644,7 +644,7 @@
                     1.3vw,
                     15px
                 );
-                color: rgba(255, 255, 255, 0.70);
+                color: rgba(255, 255, 255, 0.7);
                 font-weight: 575;
                 line-height: 1.6;
             }
@@ -806,8 +806,8 @@
                     1.1vw,
                     13px
                 );
-                color: rgba(255, 255, 255, 0.70);
-                font-weight:575;
+                color: rgba(255, 255, 255, 0.7);
+                font-weight: 575;
                 margin-top: 3px;
             }
             .ben-center {
@@ -916,8 +916,8 @@
                     1.2vw,
                     14px
                 );
-                color: rgba(255, 255, 255, 0.70);
-                font-weight:575;
+                color: rgba(255, 255, 255, 0.7);
+                font-weight: 575;
                 line-height: 1.5;
             }
 
@@ -991,7 +991,7 @@
                     1.2vw,
                     14px
                 );
-                color: rgba(255, 255, 255, 0.70);
+                color: rgba(255, 255, 255, 0.7);
                 font-weight: 575;
                 letter-spacing: 1px;
             }
@@ -1070,8 +1070,8 @@
                     1.8vw,
                     20px
                 );
-                color: rgba(255, 255, 255, 0.70);
-                margin-bottom: 48px;
+                color: rgba(255, 255, 255, 0.7);
+                margin-bottom: 10px;
                 font-weight: 575;
             }
             .s10-sep {
@@ -1124,14 +1124,50 @@
                 padding: 12px 32px;
                 margin-bottom: 16px;
             }
-            .s10-web {
-                font-size: clamp(
-                    12px,
-                    1.4vw,
-                    18px
+
+            .s10-qr-sep {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                width: 80%;
+                margin: 28px 0 10px;
+            }
+            .s10-sep-line {
+                flex: 1;
+                height: 1px;
+                background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(0, 168, 255, 0.4),
+                    transparent
                 );
-                color: rgba(255, 255, 255, 0.3);
-                letter-spacing: 3px;
+            }
+            .s10-qr-box {
+                border-radius: 16px;
+                overflow: hidden;
+                border: 2px solid #00a8ff;
+                box-shadow:
+                    0 0 18px
+                        rgba(0, 168, 255, 0.8),
+                    0 0 48px
+                        rgba(0, 168, 255, 0.3),
+                    inset 0 0 12px
+                        rgba(0, 168, 255, 0.1);
+                flex-shrink: 0;
+                padding: 8px;
+                background: rgba(0, 21, 56, 0.9);
+                margin-bottom:10px;
+            }
+            .s10-qr-scan {
+                font-size: clamp(
+                    11px,
+                    1.2vw,
+                    15px
+                );
+                color: rgba(255, 255, 255, 0.45);
+                text-transform: uppercase;
+                letter-spacing: 0.12em;
+                margin-bottom: 24px;
             }
         </style>
     </head>
@@ -2129,21 +2165,37 @@
                         for unattended &amp;
                         self-service
                     </div>
-                    <div
-                        class="s10-sep u d2"
-                    ></div>
-                    <div class="s10-vend u d3">
+
+                    <div class="s10-qr-sep u d3">
+                        <div
+                            class="s10-sep-line"
+                        ></div>
+                        <div class="s10-qr-box">
+                            <img
+                                src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https://aztek.lu/en/&bgcolor=001538&color=ffffff&margin=8"
+                                alt="QR Code aztek.lu"
+                                width="140"
+                                height="140"
+                            />
+                        </div>
+                        <div
+                            class="s10-sep-line"
+                        ></div>
+                    </div>
+                    <div class="s10-qr-scan u d3">
+                        Scan to visit us
+                        &nbsp;·&nbsp; aztek.lu
+                    </div>
+
+                    <div class="s10-vend u d4">
                         <span class="v">VEND</span
                         ><span class="i"
                             >ITALIA</span
                         >
                     </div>
-                    <div class="s10-hall u d4">
+                    <div class="s10-hall u d5">
                         Hall B3 &nbsp;·&nbsp;
                         Booth 007
-                    </div>
-                    <div class="s10-web u d5">
-                        aztek.lu
                     </div>
                 </div>
             </div>
@@ -2175,7 +2227,7 @@
                 9000, 9000, 9000, 9000, 9000,
                 9000, 9000, 9000, 9000, 9000,
             ];
-            const HIDE_LOGO = [0, N - 1]; // hero & closing
+            const HIDE_LOGO = [0, N - 1];
             let cur = 0,
                 timer = null;
             const corner =
